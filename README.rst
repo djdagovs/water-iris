@@ -19,7 +19,7 @@ Also uses various fonts:
 Preview
 -------
 
-.. image:: https://raw.github.com/gist/3885420/1bcd46f617947e79f7fd4543ae82a9edd5d21344/iris_small.png
+.. image:: https://raw.github.com/jarv/water-iris/master/preview.png
     :align: center
 
 Variables
