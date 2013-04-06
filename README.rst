@@ -34,11 +34,12 @@ Some of the variables that could be used:
 Installation
 ------------
 
-To install, go to your pelican theme directory and clone the repo. For 
+To install, clone the repo and add it as a new theme:
+
 example::
     
-    $ cd /home/slok/.virtualenvs/blog/lib/python2.7/site-packages/pelican/themes/
-    $ git clone https://github.com/slok/iris.git
+    $ git clone https://github.com/jarv/water-iris.git
+    $ pelican-themes -s path/to/water-iris
 
 Set the variable ``THEME`` to ``iris`` in your pelican settings, like this::
 
