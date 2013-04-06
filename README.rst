@@ -56,8 +56,6 @@ that is created wit ```something```. This renders inline source code. So I added
 css also, not only ``code`` like most themes. Example:
 
 
-.. image:: https://raw.github.com/gist/3885420/4d7a8557780ab74c5ae797a4f6e82cbf11aec0c6/iris_inline.png
-    :align: center
 
 License
 -------
