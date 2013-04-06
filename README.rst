@@ -9,9 +9,6 @@ Water-Iris is a `pelican <http://getpelican.com>`_ theme based on the `iris <htt
 
 It follows the same idea behind Iris with some of the visual style in waterspill.
 
-beautiful source code syntax (Thank you `pygments <http://pygments.org/>`_!)
-Also uses various fonts:
-
 - For social icons: `Font awesome <http://fortawesome.github.com/Font-Awesome/>`_
 - For the title: `The girl next door <http://www.google.com/webfonts/specimen/The+Girl+Next+Door>`_
 - For the soure code: `Inconsolata <http://www.google.com/webfonts/specimen/Inconsolata>`_
