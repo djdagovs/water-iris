@@ -27,6 +27,7 @@ Some of the variables that could be used:
 - ``DISQUS_SITENAME``: For the disqus comments
 - ``GOSQUARED_SITENAME``: For the Go squared analytics
 - ``EMAIL``: For the email "mailto:"
+- ``SOCIAL``: for github, twitter
 
 Installation
 ------------
