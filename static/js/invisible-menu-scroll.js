@@ -12,7 +12,7 @@ function invisibleMenu() {
             //Depends on the position not if scrolls down or up
             opacity = (1 - now/pixels);
         }
-        $("div.navigation").css({"opacity": opacity});
+        $("div.social-navigation").css({"opacity": opacity});
     };
     $(window).scroll(move);
     move();

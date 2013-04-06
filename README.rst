@@ -5,8 +5,10 @@ Iris
 What is iris?
 -------------
 
-Iris is a `pelican <http://getpelican.com>`_ theme based on `Flask webpage <http://flask.pocoo.org/>`_ 
-This theme is very simple and easy to read, perfect for a minimalist blog without much things and
+WaterIris is a `pelican <http://getpelican.com>`_ theme based on the `iris <http://github.com/slok/iris>`_ theme and the `waterspill <https://github.com/getpelican/pelican-themes/tree/master/waterspill-en>`_ theme.
+
+It follows the same idea behind Iris with some of the visual style in waterspill.
+
 beautiful source code syntax (Thank you `pygments <http://pygments.org/>`_!)
 Also uses various fonts:
 
@@ -40,7 +42,7 @@ example::
 
 Set the variable ``THEME`` to ``iris`` in your pelican settings, like this::
 
-    THEME = "iris"
+    THEME = "water-iris"
 
 Notes
 -----
