@@ -1,11 +1,11 @@
 ====
-Iris
+Water-Iris
 ====
 
-What is iris?
+What is water-iris?
 -------------
 
-WaterIris is a `pelican <http://getpelican.com>`_ theme based on the `iris <http://github.com/slok/iris>`_ theme and the `waterspill <https://github.com/getpelican/pelican-themes/tree/master/waterspill-en>`_ theme.
+Water-Iris is a `pelican <http://getpelican.com>`_ theme based on the `iris <http://github.com/slok/iris>`_ theme and the `waterspill <https://github.com/getpelican/pelican-themes/tree/master/waterspill-en>`_ theme.
 
 It follows the same idea behind Iris with some of the visual style in waterspill.
 
