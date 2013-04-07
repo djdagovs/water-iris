@@ -13,6 +13,11 @@ function invisibleMenu() {
             opacity = (1 - now/pixels);
         }
         $("div.social-navigation").css({"opacity": opacity});
+        if (opacity <= 0) {
+          $("div.social-navigation").hide();
+        } else {
+          $("div.social-navigation").show();
+        }    
     };
     $(window).scroll(move);
     move();
