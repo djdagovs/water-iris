@@ -1,8 +1,9 @@
-body         { background: url(../img/background.jpg); font-family: 'Georgia', serif; font-size: 16px; color: #444; }
+body         { background-color: #004B6B; font-family: 'Georgia', serif; font-size: 16px; color: #444; }
 a            { color: #004B6B; }
 a:hover      { color: #6D4100; }
+.box-mat { margin: 80px auto; width: 900px; background-color: #f4f4f4;}
 .box-outer   { width: 780px; padding-top: 15px; padding-bottom: 15px; margin: 0px auto; background: url(../img/body.gif) repeat-y; }
-.box         { width: 650px; padding: 25px; margin: 0px auto; background-color: #f4f4f4;}
+.box         { border-radius: 10px; -moz-border-radius: 10px; width: 650px; padding: 25px; margin: 0px auto; background-color: white; }
 h2, h3, h4   { font-family: 'Garamond', 'Georgia', serif; font-weight: normal; color: #004B6B;}
 h1           { margin: 0 0 30px 0; background: no-repeat center;
                height: 165px; }
@@ -16,7 +17,7 @@ h3           { font-size: 24px; margin: 15px 0 5px 0; }
 h4           { font-size: 19px; margin: 15px 0 5px 0; }
 textarea, code, tt,
 pre          { font-family: 'Inconsolata', sans-serif, monospace!important; 
-             color: #000; font-size: 14px ; background: #eee; }
+             color: #000; font-size: 14px ; background: #f4f4f4; }
 pre          { padding: 7px 30px; margin: 15px 15px; line-height: 1.3; 
              border-style:solid; border-width:1px; border-color:#bbb;}
 
@@ -76,7 +77,7 @@ div.navigation {
     margin: 0px auto;
 }
 
-div.navigation a   { text-decoration: none;  font-size: 24px; padding: 10px;}
+div.navigation a   { text-decoration: none;  font-weight: bold; font-size: 24px; padding: 10px;}
 div.navigation ol  { list-style-type: none; margin: 0px 25px 0px 25px; padding-top: 10px; }
 div.navigation li  { display: inline; padding: 0; content:none;}
 
