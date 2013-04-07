@@ -1,9 +1,9 @@
-====
+==========
 Water-Iris
-====
+==========
 
 What is water-iris?
--------------
+-------------------
 
 Water-Iris is a `pelican <http://getpelican.com>`_ theme based on the `iris <http://github.com/slok/iris>`_ theme and the `waterspill <https://github.com/getpelican/pelican-themes/tree/master/waterspill-en>`_ theme.
 
@@ -39,7 +39,7 @@ example::
     $ git clone https://github.com/jarv/water-iris.git
     $ pelican-themes -s path/to/water-iris
 
-Set the variable ``THEME`` to ``iris`` in your pelican settings, like this::
+Set the variable ``THEME`` to ``water-iris`` in your pelican settings, like this::
 
     THEME = "water-iris"
 
