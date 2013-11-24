@@ -87,12 +87,15 @@ body {
     margin-right: 2.35765%;
     width: 100%;
     text-align: center;
-    width: 100%; }
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px; }
     body footer.footer:last-child {
       margin-right: 0; }
   body div.highlight {
     padding: 15px;
-    background-color: #f4f4f4; }
+    background-color: #f4f4f4;
+    font-size: 14px; }
   body .banner {
     font-size: 75px;
     margin: 40px 0 5px 0;
@@ -121,13 +124,17 @@ table.archives {
     background-color: #dbdbdb; }
 
 article.archive {
-  padding: 10px;
+  padding: 15px;
   box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #cccccc;
+  font-size: 16px;
+  margin-top: 10px;
   background-color: white; }
 
 section {
-  padding: 10px;
+  padding: 15px;
   box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #cccccc;
+  font-size: 16px;
+  margin-top: 10px;
   background-color: white; }
 
 .twitter:before {
@@ -176,31 +183,21 @@ div.social-navigation {
 .posts li {
   padding-bottom: 30px; }
 
-.post h2 {
-  font-size: 40px; }
-
-.post h2 a {
-  text-decoration: none; }
-
 .post-info abbr {
   font-size: 15px;
   color: #555555;
   font-style: italic; }
 
 div.footer {
+  padding: 20px;
   text-align: center; }
 
 footer.post-info {
   padding-bottom: 10px; }
-
-article .archive {
-  margin-top: 10px;
-  margin-bottom: 10px; }
 
 .entry-content {
   margin-top: 10px;
   margin-bottom: 40px; }
 
 .archive-entry-title a {
-  font-size: 40px;
   text-decoration: none; }
