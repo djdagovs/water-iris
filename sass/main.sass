@@ -1,65 +1,120 @@
 @import 'bourbon/bourbon'
+@import 'neat-settings'
+@import 'neat/neat'
 
 // color definitions
-
-$lightgrey: #e1e1e1
-$darkgrey: #444
-$brown: #6d4100
-$darkblue: #004b6b
-$lightblue: #f4f4f4
+$dark-red: #77141c
+$orange-red: #E48743
+$yellow-orange: #EDC571
+$yellow: #FDD56C
+$light-blue: #81C6DD
+$dark-blue: #27709b
+$mantis: #90CA77
+$gray: #A9A9A9
+$shade-gray: #939393
+$light-gray: #f4f4f4
+$teal: #00ab88
+$dark-charcol: #0d1117
+$charcol: #161e27
+h2
+  font-size: 24px
+  font-family: $helvetica
+  color: $dark-red
 
 a            
-  color: $darkblue
+  color: $dark-blue
+  text-decoration: none
 
 a:hover      
-  color: $brown
+  color: $dark-red
 
 body
+  background-color: $light-gray
+  div.container
+    @include outer-container
+    @include media(min-width 900px, 12)
+      div.content
+        @include span-columns(7)
+      aside.right-nav
+        @include span-columns(5)
+      div.top-social
+        display: None
+    @include media(max-width 900px, 12)
+      div.content
+        @include span-columns(12)
+      aside.right-nav
+        display: None
 
-  background-color: $lightgrey
-  color: $darkgrey
+    aside
+      background-color: $light-gray
+      height: 100%
+    div.social-navigation
+      background-color: darken($light-gray, 5%)
 
-  .box-mat 
-
-    border-radius: 10px
-    -moz-border-radius: 10px
-    margin: 60px auto
-    width: 900px
-    background-color: $lightblue
-
-    div.highlight
-      padding: 15px
-      background-color: $lightblue
-
-    .banner      
-      font-size: 75px
-      margin: 40px 0 5px 0
+    div.navigation
+      background-color: $charcol
+      display: block
       text-align: center
-      a    
-        text-decoration: none
+      @include clearfix
+      a
+        font-family: $helvetica
+        float: left
+        display: block
+        position: relative
+        width: 33%
+        font-size: 24px
+        padding: 0px
+        color: $light-blue
+      a:hover      
+        color: $dark-red
+  footer.footer
+    @include span-columns(12)
+    text-align: center
+    width: 100% 
 
-    .box-outer   
-      width: 780px
-      padding-top: 15px
-      padding-bottom: 15px
-      margin: 0px auto
 
-      .box         
-        border-radius: 10px
-        -moz-border-radius: 10px
-        width: 650px
-        padding: 25px
-        margin: 0px auto
-        background-color: white
+  div.highlight
+    padding: 15px
+    background-color: $light-gray
 
-    div.bottom
-      height: 48px
-      padding-top: 0
-      text-align: center
-      top: 0
-      left: 0
-      width: 780px
-      margin: 0px auto
+  .banner      
+    font-size: 75px
+    margin: 40px 0 5px 0
+    text-align: center
+    a    
+      text-decoration: none
+
+  div.bottom
+    height: 48px
+    padding-top: 0
+    text-align: center
+    top: 0
+    left: 0
+    width: 780px
+    margin: 0px auto
+
+
+table.archives
+  font-family: $helvetica
+  font-size: 16px
+  display: block
+  width: 100%
+  td
+    padding: 5px 
+  td.even
+    background-color: $light-gray
+  td.odd
+    background-color: darken($light-gray, 10%)
+
+article.archive
+  padding: 10px
+  box-shadow: 0 0 0 1px #d1d1d1,0 0 4px 1px #ccc
+  background-color: white
+
+section
+  padding: 10px
+  box-shadow: 0 0 0 1px #d1d1d1,0 0 4px 1px #ccc
+  background-color: white
 
 .twitter:before 
   background: no-repeat
@@ -83,77 +138,25 @@ body
   color: #888
   font-size: 13px
 
-// Navigation
-
-div.navigation
-  height: 48px
-  padding: 2px 0px 0px 0px
-  text-align: right
-  top: 0
-  left: 0
-  width: 780px
-  margin: 0px auto
-
-div.navigation a   
-  text-decoration: none
-  font-weight: bold
-  font-size: 24px
-  padding: 10px
-
-div.navigation ol
-  list-style-type: none
-  margin: 0px 25px 0px 25px
-  padding-top: 10px
-
-div.navigation li
-  display: inline
-  padding: 0
-  content: none
 
 // Social navigation
-div.social-navigation a
-  text-decoration: none
-  font-size: 40px
-  padding: 10px
-
-div.social-navigation ol
-  margin: 0
-  padding: 0
-
-div.social-navigation li
-  display: inline
-  padding: 0
-  content: none
-
-div.social-navigation
-  float: left
-  background-color: #f4f4f4
-  
+div.social-navigation 
   padding-top: 0
   text-align: center
-  position: fixed
-  top: 0
-  left: 0
-  z-index: 999
-  width: 100%
   height: 50px
+  a
+    text-decoration: none
+    font-size: 40px
+    padding: 10px
 
-.current a
-  color: #666
+  ol
+    margin: 0
+    padding: 0
 
-// Social
-.social
-  margin: 10px 0 10px 0
-  font-size: 40px
-  text-align: center
-
-.social a
-  margin: 10px 20px 5px 20px
-  color: #777
-  text-decoration: none
-
-.social a:hover 
-  color: #004B6B
+  li
+    display: inline
+    padding: 0
+    content: none
 
 // Posts
 .posts ol, .posts ul, .posts li  
@@ -192,9 +195,3 @@ article .archive
 .archive-entry-title a
   font-size: 40px
   text-decoration: none
-
-hr 
-  border: 0
-  height: 0
-  border-top: 1px solid rgba(0, 0, 0, 0.1)
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3)

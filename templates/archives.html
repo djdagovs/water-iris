@@ -3,12 +3,15 @@
 {% block content %}
 <h2>Archives:</h2>
 
-<table class="archives">
+<table class="archives standalone">
 {% for article in dates %}
     <tr>
-        <td>{{ article.locale_date }}</td>
-        <td><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></td>
+      <td class="{{ loop.cycle('odd', 'even') }}">{{ article.locale_date }}</td>
+      <td class="{{ loop.cycle('odd', 'even') }}"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></td>
     </tr>
 {% endfor %}
 </table>
-{% endblock %}
+{% endblock content %}
+
+{% block aside %}
+{% endblock aside %}

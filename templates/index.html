@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block content %}        
-<section id="content">
 <div class="posts">
     <ol id="post-list">
     {% for article in articles_page.object_list %}        
@@ -23,11 +22,9 @@
             <a href="{{ SITEURL }}/{{ article.url }}">read more</a></div>
             <!-- /.entry-content -->
           </article>
-        <hr />
         </li>
     {% endfor %}
     </ol><!-- /#posts-list -->
 </div>
 {% include 'pagination.html' %}
-</section><!-- /#content -->
 {% endblock content %}
