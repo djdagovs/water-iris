@@ -46,7 +46,6 @@ body
 
     aside
       background-color: $light-gray
-      height: 100%
     div.social-navigation
       background-color: darken($light-gray, 5%)
 
@@ -165,10 +164,14 @@ div.social-navigation
     content: none
 
 // Posts
-ol#post-list
-  ul.posts, li.posts
-    list-style-type: none
-
+div.posts
+  ol
+    margin: 0px
+    padding: 0px
+    ul.posts, li.posts
+      list-style-type: none
+    ul, li
+      list-style-type: disc
 .post-info abbr
   font-size: 15px
   color: #555
