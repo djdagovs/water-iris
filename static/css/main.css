@@ -175,12 +175,10 @@ div.social-navigation {
     padding: 0;
     content: none; }
 
-.posts ol, .posts ul, .posts li {
+ol#post-list ul.posts, ol#post-list li.posts {
   list-style-type: none;
   padding: 0;
-  margin: 0; }
-
-.posts li {
+  margin: 0;
   padding-bottom: 30px; }
 
 .post-info abbr {
