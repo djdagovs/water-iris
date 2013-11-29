@@ -116,15 +116,18 @@ body {
 
 table.archives {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   display: block;
   width: 100%; }
   table.archives td {
     padding: 5px; }
   table.archives td.even {
     background-color: #f4f4f4; }
+  table.archives td.date {
+    font-family: Fixed, monospace;
+    width: 100px; }
   table.archives td.odd {
-    background-color: #dbdbdb; }
+    background-color: #e7e7e7; }
 
 article.archive {
   padding: 15px;

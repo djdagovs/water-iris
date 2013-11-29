@@ -38,7 +38,7 @@
         <table class="archives">
         {% for article in dates %}
             <tr>
-              <td class="{{ loop.cycle('odd', 'even') }}">{{ article.locale_date }}</td>
+              <td class="date {{ loop.cycle('odd', 'even') }}">{{ article.date.strftime("%d-%b-%Y") }}</td>
               <td class="{{ loop.cycle('odd', 'even') }}"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></td>
             </tr>
         {% endfor %}
