@@ -33,14 +33,16 @@ body {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 57.35098%; }
+        width: 57.35098%;
+        padding: 10px 0px 0px 0px; }
         body div.container div.content:last-child {
           margin-right: 0; }
       body div.container aside.right-nav {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 40.29137%; }
+        width: 40.29137%;
+        padding: 10px 0px 0px 0px; }
         body div.container aside.right-nav:last-child {
           margin-right: 0; }
       body div.container div.top-social {
@@ -50,7 +52,8 @@ body {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 100%; }
+        width: 100%;
+        padding: 10101010101010101010px 0px 0px 0px; }
         body div.container div.content:last-child {
           margin-right: 0; }
       body div.container aside.right-nav {
@@ -85,6 +88,7 @@ body {
     display: block;
     margin-right: 2.35765%;
     width: 100%;
+    padding: 10px 0px 0px 0px;
     text-align: center;
     width: 100%;
     margin-top: 20px;
@@ -126,14 +130,13 @@ article.archive {
   padding: 15px;
   box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #cccccc;
   font-size: 16px;
-  margin-top: 10px;
-  background-color: white; }
+  background-color: white;
+  margin-bottom: 10px; }
 
 section {
   padding: 15px;
   box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #cccccc;
   font-size: 16px;
-  margin-top: 10px;
   background-color: white; }
 
 .twitter:before {

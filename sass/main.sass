@@ -34,13 +34,16 @@ body
     @include media(min-width 900px, 12)
       div.content
         @include span-columns(7)
+        @include pad(10px 0px 0px 0px)
       aside.right-nav
         @include span-columns(5)
+        @include pad(10px 0px 0px 0px)
       div.top-social
         display: None
     @include media(max-width 900px, 12)
       div.content
         @include span-columns(12)
+        @include pad(10101010101010101010px 0px 0px 0px)
       aside.right-nav
         display: None
 
@@ -67,6 +70,7 @@ body
         color: $dark-red
   footer.footer
     @include span-columns(12)
+    @include pad(10px 0px 0px 0px)
     text-align: center
     width: 100% 
     margin-top: 20px
@@ -111,14 +115,13 @@ article.archive
   padding: 15px
   box-shadow: 0 0 0 1px #d1d1d1,0 0 4px 1px #ccc
   font-size: 16px
-  margin-top: 10px
   background-color: white
+  margin-bottom: 10px
 
 section
   padding: 15px
   box-shadow: 0 0 0 1px #d1d1d1,0 0 4px 1px #ccc
   font-size: 16px
-  margin-top: 10px
   background-color: white
 
 .twitter:before 
