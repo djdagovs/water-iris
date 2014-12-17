@@ -14,9 +14,9 @@ $light-gray: #f4f4f4
 $teal: #00ab88
 $dark-charcol: #0d1117
 $charcol: #161e27
+$default-box-shadow: 0 0 0 1px #d1d1d1,0 0 4px 1px #ccc
 
 h2
-  font-size: 24px
   font-family: $helvetica
   color: $dark-red
 
@@ -27,190 +27,175 @@ a
 a:hover      
   color: $dark-red
 
+
+ol
+  margin: 0px
+  padding: 0px
+  ul.posts, li.posts
+    list-style-type: none
+  ul, li
+    list-style-type: disc
+
 body
   background-color: $light-gray
-  div.container
-    // **************************   START HEADER
-    header.banner
-      position: relative
+
+  // **************************   START HEADER
+  header.banner
+    position: relative
+    margin: 0px auto
+    pre.banner      
+      font-family: 'Courier New', Monospace
+      white-space: pre
+      color: $shade-gray
+    pre.mobile-banner
+      display: block
+      width: 470px
       margin: 0px auto
-      pre.banner      
-        font-family: 'Courier New', Monospace
-        white-space: pre
-        color: $shade-gray
+    @media all and (min-device-width: 900px)
+      width: 750px
       pre.mobile-banner
+        display: none
+    @media all and (max-device-width: 900px)
+      width: 100%
+      pre.reg-banner
+        display: none
+    // ** start social
+    div.social-navigation
+      @media all and (min-device-width: 900px)
+
+        display: inline
+        position: absolute
+        right: 25px 
+        top: 0px
+        ol
+          display: inline-block
+        a
+          font-size: 4em
+      @media all and (max-device-width: 900px)
+        background-color: darken($light-gray, 5%)
         display: block
-        width: 470px
-        margin: 0px auto
-      @media screen and (min-width: 900px)
-        width: 750px
-        pre.mobile-banner
-          display: none
-          font-size: 16px 
-      @media screen and (max-width: 900px)
-        width: 100%
-        pre.reg-banner
-          display: none
-          font-size: 16px 
-      // ** start social
-      div.social-navigation
-        @media screen and (min-width: 900px)
-
-          display: inline
-          position: absolute
-          right: 25px 
-          top: 5px
-          ol
-            display: inline-block
-
-        @media screen and (max-width: 900px)
-          background-color: darken($light-gray, 5%)
+        ol
           display: block
-          ol
-            display: block
-            -webkit-margin-before: 0px
-            -webkit-margin-after: 0px
-            -webkit-padding-start: 0px
-        padding-top: 0
+        a
+          font-size: 6em
+
+      a
+        padding: 0px
+      padding-top: 0
+      text-align: center
+
+      li
+        display: inline
+        padding: 0
+
+
+    // ** start nav links 
+    div.navigation
+
+      @media all and (min-device-width: 900px)
+        position: absolute
+        display: inline-block
+        ol
+          display: inline
+        text-align: right
+        right: 120px
+        top: 320px
+        a
+          font-size: 2em
+      @media all and (max-device-width: 900px)
+        display: block
+        ol
+          display: block
+        width: 100%
+        padding: 10px
         text-align: center
         a
-          font-size: 40px
-          padding: 0px
+          font-size: 3em
+      a
+        font-family: $helvetica
+        color: $dark-blue
+      a:hover      
+        color: $dark-red
+  // ******************************** END HEADER
+
+  div.content
+    margin: 20px
+  // ************* Code highlights
+  div.highlight
+    padding: 15px
+    background-color: $light-gray
+    font-size: .8em
+
+  // ************* summary article view
+  article.archive
+    padding: 20px
+    box-shadow: $default-box-shadow
+    background-color: white
+    margin-bottom: 10px
+
+    h2
+      font-size: 2.5em
+
+    div.entry-summary
+      font-size: 1.5em
+
+    // timestamp for article
+    footer.post-info abbr
+      padding-bottom: 10px
+      font-size: 1.5em
+      color: #555
+      font-style: italic
 
 
-        li
-          display: inline
-          padding: 0
+
+  // ************* single article view
+  section#content
+    padding: 30px
+    box-shadow: $default-box-shadow
+    font-size: 2em
+    background-color: white
+
+    div.entry-content
+      font-size: .8em
+
+    // timestamp for article
+    footer.post-info abbr
+      padding-bottom: 10px
+      font-size: .8em
+      color: #555
+      font-style: italic
 
 
-      // ** start nav links 
-      div.navigation
+  // about and archives div wrapper
+  div.page-wrapper, div.archives-wrapper
+    padding: 30px
+    box-shadow: $default-box-shadow
+    font-size: 1.5em
+    background-color: white
 
-        @media screen and (min-width: 900px)
-          position: absolute
-          display: inline-block
-          ol
-            display: inline
-          text-align: right
-          right: 200px
-          top: 320px
-
-
-        @media screen and (max-width: 900px)
-          display: block
-          ol
-            display: block
-          width: 100%
-          padding: 10px
-          text-align: center
-
-        a
-          font-family: $helvetica
-          font-size: 24px
-          color: $dark-blue
-        a:hover      
-          color: $dark-red
-    // ******************************** END HEADER
+  div.archives-wrapper
+    table.archives
+      font-family: $helvetica
+      font-size: 1em
+      width: 100%
+      td
+        padding: 5px 
+      td.even
+        background-color: $light-gray
+      td.date
+        font-family: Fixed, monospace
+        width: 100px
+      td.odd
+        background-color: darken($light-gray, 5%)
 
 
-  footer.footer
+  // ************* Footer
+  footer#page-footer
+    font-size: 1.5em
     text-align: center
     width: 100% 
     margin-top: 20px
     margin-bottom: 20px
 
 
-  div.highlight
-    padding: 15px
-    background-color: $light-gray
-    font-size: 14px
 
-  div.bottom
-    height: 48px
-    padding-top: 0
-    text-align: center
-    top: 0
-    left: 0
-    width: 780px
-    margin: 0px auto
-
-
-table.archives
-  font-family: $helvetica
-  font-size: 14px
-  display: block
-  width: 100%
-  td
-    padding: 5px 
-  td.even
-    background-color: $light-gray
-  td.date
-    font-family: Fixed, monospace
-    width: 100px
-  td.odd
-    background-color: darken($light-gray, 5%)
-
-article.archive
-  padding: 15px
-  box-shadow: 0 0 0 1px #d1d1d1,0 0 4px 1px #ccc
-  font-size: 16px
-  background-color: white
-  margin-bottom: 10px
-
-section
-  padding: 15px
-  box-shadow: 0 0 0 1px #d1d1d1,0 0 4px 1px #ccc
-  font-size: 16px
-  background-color: white
-
-.twitter:before 
-  background: no-repeat
-  content: " "
-  float: right
-  width: 64px
-  height: 64px
-  margin: -25px 0 0 0
-  padding: 0 0 10px 10px
-
-.twitter li  
-  margin: 15px 0
-  line-height: 1.2
-  font-size: 15px
-
-.twitter li:before 
-  content: "♯"
-  padding-left: 4px
-
-.twitter .meta, .twitter .meta a
-  color: #888
-  font-size: 13px
-
-
-
-// Posts
-div.posts
-  ol
-    margin: 0px
-    padding: 0px
-    ul.posts, li.posts
-      list-style-type: none
-    ul, li
-      list-style-type: disc
-.post-info abbr
-  font-size: 15px
-  color: #555
-  font-style: italic
-
-div.footer
-  padding: 20px
-  text-align: center
-
-footer.post-info 
-  padding-bottom: 10px
-
-.entry-content
-  margin-top: 10px
-  margin-bottom: 40px
-
-.archive-entry-title a
-  text-decoration: none

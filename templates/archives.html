@@ -1,17 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Archives:</h2>
+<div class="archives-wrapper">
+  <h2>Archives:</h2>
 
-<table class="archives standalone">
-{% for article in dates %}
-    <tr>
-      <td class="{{ loop.cycle('odd', 'even') }}">{{ article.locale_date }}</td>
-      <td class="{{ loop.cycle('odd', 'even') }}"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></td>
-    </tr>
-{% endfor %}
-</table>
+  <table class="archives">
+  {% for article in dates %}
+      <tr>
+        <td class="{{ loop.cycle('odd', 'even') }}">{{ article.locale_date }}</td>
+        <td class="{{ loop.cycle('odd', 'even') }}"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></td>
+      </tr>
+  {% endfor %}
+  </table>
+</div>
 {% endblock content %}
-
-{% block aside %}
-{% endblock aside %}

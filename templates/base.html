@@ -4,6 +4,7 @@
     {% block head %}
 
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, initial-scale=0, maximum-scale=1, user-scalable=yes">
     <!-- CSS -->
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/{{ CSS_FILE }}" type="text/css" />
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css" type="text/css" />
@@ -26,10 +27,8 @@
   </head>
 
   <body>
-    <div class="container">
-
-      <header class="banner">
-        <pre class="banner reg-banner">
+    <header class="banner">
+      <pre class="banner reg-banner">
             OOOO
            O::::O
             OOOO
@@ -53,29 +52,28 @@ O::::::OOO::::::O
  OO::::::::::::O
    OOO::::::OOO
       OOOOOO
-        </pre> 
-        <pre class="banner mobile-banner">
+      </pre> 
+      <pre class="banner mobile-banner">
        __       ___      .______     ____    ____
       |  |     /   \     |   _  \    \   \  /   /
       |  |    /  ^  \    |  |_)  |    \   \/   /
 .--.  |  |   /  /_\  \   |      /      \      /
 |  `--'  |  /  _____  \  |  |\  \----.  \    /
  \______/  /__/     \__\ | _| `._____|   \__/
-        </pre>
-        {% include 'social_navigation.html' %}
-        <div class="navigation">
-          {% for title, link in MENUITEMS %}
-          <a href="{{ link }}">[ {{ title }} ]</a>
-          {% endfor %}
-        </div><!-- /#menu -->
 
-      </header>
+      </pre>
+      {% include 'social_navigation.html' %}
+      <div class="navigation">
+        {% for title, link in MENUITEMS %}
+        <a href="{{ link }}">[ {{ title }} ]</a>
+        {% endfor %}
+      </div><!-- /#menu -->
 
+    </header>
 
-      <div class="content">{% block content %}{% endblock %}</div>
-    </div> <!-- end container -->
+    <div class="content">{% block content %}{% endblock %}</div>
 
-    <footer id="contentinfo" class="footer">
+    <footer id="page-footer">
       <div>
         {% for name, link in SOCIAL %}
         <a href="{{ link }}"><i class="icon-{{ name }}"></i>  </a>
@@ -88,8 +86,6 @@ O::::::OOO::::::O
         powered by <a href="http://getpelican.com/">pelican</a>.
       </div>
     </footer><!-- /#contentinfo -->
-
-
 
   </body>
 </html>
