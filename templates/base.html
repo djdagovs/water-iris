@@ -2,6 +2,7 @@
 <html lang="{{ DEFAULT_LANG }}">
   <head>
     {% block head %}
+
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
     <!-- CSS -->
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/{{ CSS_FILE }}" type="text/css" />
@@ -27,37 +28,51 @@
   <body>
     <div class="container">
 
-      <header id="banner" class="body">
-        <div class="banner"><a href="{{ SITEURL }}">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></div>
-      </header>
-      <div class="navigation">
-        {% for title, link in MENUITEMS %}
-        <a href="{{ link }}">{{ title }}</a>
-        {% endfor %}
-      </div><!-- /#menu -->
+      <header class="banner">
+        <pre class="banner reg-banner">
+            OOOO
+           O::::O
+            OOOO
 
-      <div class="top-social">
-      {% include 'social_navigation.html' %}
-      </div>
+          OOOOOOO  OOOOOOOOOOOOO  OOOOO   OOOOOOOOOOOOOOOO           OOOOOOO
+          O:::::O  O::::::::::::O O::::OOO:::::::::OO:::::O         O:::::O
+           O::::O  OOOOOOOOO:::::OO:::::::::::::::::OO:::::O       O:::::O
+           O::::O           O::::OOO::::::OOOOO::::::OO:::::O     O:::::O
+           O::::O    OOOOOOO:::::O O:::::O     O:::::O O:::::O   O:::::O
+           O::::O  OO::::::::::::O O:::::O     OOOOOOO  O:::::O O:::::O
+           O::::O O::::OOOO::::::O O:::::O               O:::::O:::::O
+           O::::OO::::O    O:::::O O:::::O                O:::::::::O
+           O::::OO::::O    O:::::O O:::::O                 O:::::::O
+           O::::OO:::::OOOO::::::O O:::::O                  O:::::O
+           O::::O O::::::::::OO:::OO:::::O                   O:::O
+           O::::O  OOOOOOOOOO  OOOOOOOOOOO                    OOO
+           O::::O
+ OOOO      O::::O
+O::::OO   O:::::O
+O::::::OOO::::::O
+ OO::::::::::::O
+   OOO::::::OOO
+      OOOOOO
+        </pre> 
+        <pre class="banner mobile-banner">
+       __       ___      .______     ____    ____
+      |  |     /   \     |   _  \    \   \  /   /
+      |  |    /  ^  \    |  |_)  |    \   \/   /
+.--.  |  |   /  /_\  \   |      /      \      /
+|  `--'  |  /  _____  \  |  |\  \----.  \    /
+ \______/  /__/     \__\ | _| `._____|   \__/
+        </pre>
+        {% include 'social_navigation.html' %}
+        <div class="navigation">
+          {% for title, link in MENUITEMS %}
+          <a href="{{ link }}">[ {{ title }} ]</a>
+          {% endfor %}
+        </div><!-- /#menu -->
+
+      </header>
 
 
       <div class="content">{% block content %}{% endblock %}</div>
-      {% block aside %}
-
-      <aside class="right-nav">
-        {% include 'social_navigation.html' %}
-        <table class="archives">
-        {% for article in dates %}
-            <tr>
-              <td class="date {{ loop.cycle('odd', 'even') }}">{{ article.date.strftime("%d-%b-%Y") }}</td>
-              <td class="{{ loop.cycle('odd', 'even') }}"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></td>
-            </tr>
-        {% endfor %}
-        </table>
-      </aside>  <!-- end right-content -->
-      {% endblock aside %}
-
-
     </div> <!-- end container -->
 
     <footer id="contentinfo" class="footer">

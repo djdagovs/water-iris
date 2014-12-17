@@ -1,5 +1,4 @@
 @import 'bourbon/bourbon'
-@import 'neat/neat'
 
 // color definitions
 $dark-red: #77141c
@@ -15,6 +14,7 @@ $light-gray: #f4f4f4
 $teal: #00ab88
 $dark-charcol: #0d1117
 $charcol: #161e27
+
 h2
   font-size: 24px
   font-family: $helvetica
@@ -30,47 +30,90 @@ a:hover
 body
   background-color: $light-gray
   div.container
-    @include outer-container
-    @include media(min-width 900px, 12)
-      div.content
-        @include span-columns(7)
-        @include pad(10px 0px 0px 0px)
-      aside.right-nav
-        @include span-columns(5)
-        @include pad(10px 0px 0px 0px)
-      div.top-social
-        display: None
-    @include media(max-width 900px, 12)
-      div.content
-        @include span-columns(12)
-        @include pad(10px 0px 0px 0px)
-      aside.right-nav
-        display: None
-
-    aside
-      background-color: $light-gray
-    div.social-navigation
-      background-color: darken($light-gray, 5%)
-
-    div.navigation
-      background-color: $charcol
-      display: block
-      text-align: center
-      @include clearfix
-      a
-        font-family: $helvetica
-        float: left
+    // **************************   START HEADER
+    header.banner
+      position: relative
+      margin: 0px auto
+      pre.banner      
+        font-family: 'Courier New', Monospace
+        white-space: pre
+        color: $shade-gray
+      pre.mobile-banner
         display: block
-        position: relative
-        width: 33%
-        font-size: 24px
-        padding: 0px
-        color: $light-blue
-      a:hover      
-        color: $dark-red
+        width: 470px
+        margin: 0px auto
+      @media screen and (min-width: 900px)
+        width: 750px
+        pre.mobile-banner
+          display: none
+          font-size: 16px 
+      @media screen and (max-width: 900px)
+        width: 100%
+        pre.reg-banner
+          display: none
+          font-size: 16px 
+      // ** start social
+      div.social-navigation
+        @media screen and (min-width: 900px)
+
+          display: inline
+          position: absolute
+          right: 25px 
+          top: 5px
+          ol
+            display: inline-block
+
+        @media screen and (max-width: 900px)
+          background-color: darken($light-gray, 5%)
+          display: block
+          ol
+            display: block
+            -webkit-margin-before: 0px
+            -webkit-margin-after: 0px
+            -webkit-padding-start: 0px
+        padding-top: 0
+        text-align: center
+        a
+          font-size: 40px
+          padding: 0px
+
+
+        li
+          display: inline
+          padding: 0
+
+
+      // ** start nav links 
+      div.navigation
+
+        @media screen and (min-width: 900px)
+          position: absolute
+          display: inline-block
+          ol
+            display: inline
+          text-align: right
+          right: 200px
+          top: 320px
+
+
+        @media screen and (max-width: 900px)
+          display: block
+          ol
+            display: block
+          width: 100%
+          padding: 10px
+          text-align: center
+
+        a
+          font-family: $helvetica
+          font-size: 24px
+          color: $dark-blue
+        a:hover      
+          color: $dark-red
+    // ******************************** END HEADER
+
+
   footer.footer
-    @include span-columns(12)
-    @include pad(10px 0px 0px 0px)
     text-align: center
     width: 100% 
     margin-top: 20px
@@ -81,13 +124,6 @@ body
     padding: 15px
     background-color: $light-gray
     font-size: 14px
-
-  .banner      
-    font-size: 75px
-    margin: 40px 0 5px 0
-    text-align: center
-    a    
-      text-decoration: none
 
   div.bottom
     height: 48px
@@ -150,24 +186,6 @@ section
   font-size: 13px
 
 
-// Social navigation
-div.social-navigation 
-  padding-top: 0
-  text-align: center
-  height: 50px
-  a
-    text-decoration: none
-    font-size: 40px
-    padding: 10px
-
-  ol
-    margin: 0
-    padding: 0
-
-  li
-    display: inline
-    padding: 0
-    content: none
 
 // Posts
 div.posts
